@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import SectionSvg from "../svg/section-svg";
 
 type Props = {
-  className: string;
+  className?: string;
   id: string;
-  crosses: boolean;
-  crossesOffset: string;
-  customPaddings: boolean;
+  crosses?: boolean;
+  crossesOffset?: string;
+  customPaddings?: boolean;
   children: React.ReactNode;
 };
 
