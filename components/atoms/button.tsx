@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 type Props = {
-  className: string;
+  className?: string;
   href?: string;
   children: React.ReactNode;
   onClick?: () => void;
