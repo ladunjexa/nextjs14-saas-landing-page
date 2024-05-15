@@ -1,7 +1,13 @@
+import Header from "@/components/layout/header";
+import ButtonGradient from "@/components/svg/button-gradient";
+
 export default function Home() {
   return (
     <main>
-      <h1>Nextjs 14 SaaS landing page</h1>
+      <div className="overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]">
+        <Header />
+      </div>
+      <ButtonGradient />
     </main>
   );
 }

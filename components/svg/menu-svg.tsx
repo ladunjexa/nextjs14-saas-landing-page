@@ -1,13 +1,8 @@
-const MenuSvg = ({ openNavigation }) => {
+const MenuSvg = ({ openNavigation }: { openNavigation: boolean }) => {
   return (
-    <svg
-      className="overflow-visible"
-      width="20"
-      height="12"
-      viewBox="0 0 20 12"
-    >
+    <svg className="overflow-visible" width="20" height="12" viewBox="0 0 20 12">
       <rect
-        className="transition-all origin-center"
+        className="origin-center transition-all"
         y={openNavigation ? "5" : "0"}
         width="20"
         height="2"
@@ -16,7 +11,7 @@ const MenuSvg = ({ openNavigation }) => {
         transform={`rotate(${openNavigation ? "45" : "0"})`}
       />
       <rect
-        className="transition-all origin-center"
+        className="origin-center transition-all"
         y={openNavigation ? "5" : "10"}
         width="20"
         height="2"

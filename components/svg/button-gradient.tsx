@@ -14,13 +14,7 @@ const ButtonGradient = () => {
           <stop offset="0%" stopColor="#9099FC" />
           <stop offset="100%" stopColor="#89F9E8" />
         </linearGradient>
-        <linearGradient
-          id="btn-right"
-          x1="14.635%"
-          x2="14.635%"
-          y1="0%"
-          y2="100%"
-        >
+        <linearGradient id="btn-right" x1="14.635%" x2="14.635%" y1="0%" y2="100%">
           <stop offset="0%" stopColor="#9099FC" />
           <stop offset="100%" stopColor="#D87CEE" />
         </linearGradient>
