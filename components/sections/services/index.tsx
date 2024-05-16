@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Section from "@/components/layout/section";
 import Heading from "../../atoms/heading";
 import { brainwaveServices, brainwaveServicesIcons, images } from "@/constants";
@@ -11,6 +13,8 @@ import { Gradient } from "@/components/design/hero";
 type Props = {};
 
 const Services = (props: Props) => {
+  const [selectedItem, setSetselectedItem] = useState<number>(2);
+
   return (
     <Section id="how-to-use">
       <div className="container">
@@ -82,16 +86,17 @@ const Services = (props: Props) => {
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
                       key={index}
+                      onClick={() => setSetselectedItem(index)}
                       className={cn(
-                        "flex items-center justify-center rounded-2xl",
-                        index === 2
+                        "flex items-center justify-center rounded-2xl cursor-pointer",
+                        index === selectedItem
                           ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
                           : "w-10 h-10 bg-n-6 md:w-15 md:h-15"
                       )}
                     >
                       <div
                         className={cn(
-                          index === 2 &&
+                          index === selectedItem &&
                             "flex size-full items-center justify-center rounded-2xl bg-n-7"
                         )}
                       >
