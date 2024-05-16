@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "@/components/layout/section";
-import Heading from "./heading";
+import Heading from "../../atoms/heading";
 import { benefits } from "@/constants";
 import Image from "next/image";
 import Arrow from "@/components/svg/arrow";

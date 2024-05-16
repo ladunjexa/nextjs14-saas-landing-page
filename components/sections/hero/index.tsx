@@ -8,7 +8,7 @@ import { images, heroIcons } from "@/constants";
 import Button from "../../atoms/button";
 import { BackgroundCircles, BottomLine, Gradient } from "../../design/hero";
 import { ScrollParallax } from "react-just-parallax";
-import Generating from "./generating";
+import Generating from "../../atoms/generating";
 import Notification from "./notification";
 import CompanyLogos from "./company-logos";
 
