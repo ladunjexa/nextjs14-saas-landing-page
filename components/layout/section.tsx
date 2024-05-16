@@ -13,7 +13,7 @@ type Props = {
 
 const Section = ({ className, id, crosses, crossesOffset, customPaddings, children }: Props) => {
   return (
-    <div
+    <section
       {...(id && { id })}
       className={cn(
         "relative",
@@ -46,7 +46,7 @@ const Section = ({ className, id, crosses, crossesOffset, customPaddings, childr
           <SectionSvg crossesOffset={crossesOffset} />
         </>
       )}
-    </div>
+    </section>
   );
 };
 

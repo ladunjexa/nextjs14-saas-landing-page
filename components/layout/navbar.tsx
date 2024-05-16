@@ -6,22 +6,39 @@ import React, { useEffect, useState } from "react";
 import { brainwave } from "@/public/assets/index";
 import { cn } from "@/lib/utils";
 import { navigation } from "@/constants";
-import { useParams } from "next/navigation";
 import Button from "../atoms/button";
 import MenuSvg from "../svg/menu-svg";
 import { HamburgerMenu } from "../design/navbar";
 
 type Props = {};
-type TSection = "hero" | "features" | "collaboration" | "how-to-use" | "pricing";
 
 const Navbar = (props: Props) => {
-  const params = useParams();
-  const [hash, setHash] = useState<TSection>("hero");
+  const [hash, setHash] = useState<string>("hero");
   const [openNavigation, setOpenNavigation] = useState<boolean>(false);
 
   useEffect(() => {
-    setHash(window.location.hash as TSection);
-  }, [params]);
+    const dynamicNavbarHighlight = () => {
+      const sections = document.querySelectorAll("section[id]");
+
+      sections.forEach((current) => {
+        if (current === null) return;
+
+        const sectionId = current.getAttribute("id");
+        // @ts-ignore
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.getBoundingClientRect().top - sectionHeight * 0.2;
+
+        if (sectionTop < 0 && sectionTop + sectionHeight > 0 && hash !== sectionId) {
+          setHash(`#${sectionId as string}`);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", dynamicNavbarHighlight);
+
+    return () => window.removeEventListener("scroll", dynamicNavbarHighlight);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const toggleNavigation = () => setOpenNavigation(!openNavigation);
   const handleClick = () => {
