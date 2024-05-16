@@ -6,9 +6,13 @@ import Heading from "../../atoms/heading";
 import { brainwaveServices, brainwaveServicesIcons, images } from "@/constants";
 import Image from "next/image";
 import Generating from "../../atoms/generating";
-import { PhotoChatMessage, VideoBar, VideoChatMessage } from "@/components/design/services";
+import {
+  PhotoChatMessage,
+  VideoBar,
+  VideoChatMessage,
+  Gradient,
+} from "@/components/design/services";
 import { cn } from "@/lib/utils";
-import { Gradient } from "@/components/design/hero";
 
 type Props = {};
 
