@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/navbar";
 import Benefits from "@/components/sections/benefits";
+import Collaboration from "@/components/sections/collaboration";
 import Hero from "@/components/sections/hero";
 import ButtonGradient from "@/components/svg/button-gradient";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Benefits />
+        <Collaboration />
       </div>
       <ButtonGradient />
     </main>

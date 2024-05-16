@@ -12,13 +12,16 @@ import MenuSvg from "../svg/menu-svg";
 import { HamburgerMenu } from "../design/navbar";
 
 type Props = {};
+type TSection = "hero" | "features" | "collaboration";
 
 const Navbar = (props: Props) => {
   const params = useParams();
-  const [hash, setHash] = useState(window.location.hash);
+  const [hash, setHash] = useState<TSection>("hero");
   const [openNavigation, setOpenNavigation] = useState<boolean>(false);
 
-  useEffect(() => setHash(window.location.hash), [params]);
+  useEffect(() => {
+    setHash(window.location.hash as TSection);
+  }, [params]);
 
   const toggleNavigation = () => setOpenNavigation(!openNavigation);
   const handleClick = () => {
