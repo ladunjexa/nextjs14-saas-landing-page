@@ -49,7 +49,7 @@ export const BackgroundCircles = ({
   }, []);
 
   return (
-    <div className="absolute -top-[42.375rem] left-1/2 aspect-square w-[78rem] -translate-x-1/2 rounded-full border border-n-2/5 md:-top-[38.5rem] xl:-top-[32rem]">
+    <div className="absolute left-1/2 top-[-42.375rem] aspect-square w-[78rem] -translate-x-1/2 rounded-full border border-n-2/5 md:top-[-38.5rem] xl:top-[-32rem]">
       <Rings />
 
       {/* Moving background colored circle balls */}
@@ -62,7 +62,7 @@ export const BackgroundCircles = ({
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom -rotate-[56deg]">
+        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom rotate-[-56deg]">
           <div
             className={`-ml-1 -mt-32 size-4 rounded-full bg-gradient-to-b from-[#DD734F] to-[#1A1A32] transition-transform duration-500 ease-out ${
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -72,13 +72,13 @@ export const BackgroundCircles = ({
 
         <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom rotate-[54deg]">
           <div
-            className={`transit -ml-1 mt-[12.9rem] hidden size-4 rounded-full bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] transition-transform duration-500 ease-out xl:block ${
+            className={`-ml-1 mt-[12.9rem] hidden size-4 rounded-full bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] transition-transform duration-500 ease-out xl:block ${
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom -rotate-[65deg]">
+        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom rotate-[-65deg]">
           <div
             className={`-ml-1.5 mt-52 size-3 rounded-full bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] transition-transform duration-500 ease-out ${
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -86,7 +86,7 @@ export const BackgroundCircles = ({
           />
         </div>
 
-        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom -rotate-[85deg]">
+        <div className="absolute bottom-1/2 left-1/2 h-1/2 w-0.25 origin-bottom rotate-[-85deg]">
           <div
             className={`-ml-3 -mt-3 size-6 rounded-full bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] transition-transform duration-500 ease-out ${
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"

@@ -22,7 +22,7 @@ const Benefits = (props: Props) => {
           {benefits.map((item) => (
             <div
               key={item.id}
-              className="relative block bg-[length:100%_100%] bg-no-repeat p-0.5 md:max-w-[24rem]"
+              className="relative block bg-[length:100%_100%] bg-no-repeat p-0.5 md:max-w-sm"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}

@@ -61,14 +61,14 @@ const Hero = (props: Props) => {
                   src={images.robot}
                   width={1024}
                   height={490}
-                  className="w-full translate-y-[8%] scale-[1.7] md:-translate-y-[10%] md:scale-100 lg:-translate-y-[23%]"
+                  className="w-full translate-y-[8%] scale-[1.7] md:translate-y-[-10%] md:scale-100 lg:translate-y-[-23%]"
                   alt="AI"
                 />
 
                 <Generating className="absolute inset-x-4 bottom-5 md:bottom-8 md:left-1/2 md:right-auto md:w-[31rem] md:-translate-x-1/2" />
 
                 <ScrollParallax isAbsolutelyPositioned>
-                  <ul className="absolute -left-[5.5rem] bottom-[7.5rem] hidden rounded-2xl border border-n-1/10 bg-n-9/40 p-1 backdrop-blur xl:flex">
+                  <ul className="absolute bottom-[7.5rem] left-[-5.5rem] hidden rounded-2xl border border-n-1/10 bg-n-9/40 p-1 backdrop-blur xl:flex">
                     {heroIcons.map((icon, index) => (
                       <li className="p-5" key={index}>
                         <Image src={icon} height={24} width={25} alt={icon} />
@@ -79,7 +79,7 @@ const Hero = (props: Props) => {
 
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
-                    className="absolute -right-[5.5rem] bottom-44 hidden w-72 xl:flex"
+                    className="absolute bottom-44 right-[-5.5rem] hidden w-72 xl:flex"
                     title="Code generation"
                   />
                 </ScrollParallax>
