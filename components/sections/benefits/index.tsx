@@ -14,7 +14,7 @@ const Benefits = (props: Props) => {
     <Section id="features">
       <div className="container relative z-2">
         <Heading
-          className="text-center md:max-w-md lg:max-w-2xl"
+          className="md:max-w-md lg:max-w-2xl"
           title="Chat Smarter, Not Harder with Brainwave"
         />
 

@@ -43,7 +43,7 @@ const Hero = (props: Props) => {
             Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the
             open AI chat app.
           </p>
-          <Button href="/pricing" white>
+          <Button href="#pricing" white>
             Get Started
           </Button>
         </div>
@@ -61,7 +61,7 @@ const Hero = (props: Props) => {
                   src={images.robot}
                   width={1024}
                   height={490}
-                  className="translte-y-[8%] w-full scale-[1.7] md:-translate-y-[10%] md:scale-100 lg:-translate-y-[23%]"
+                  className="w-full translate-y-[8%] scale-[1.7] md:-translate-y-[10%] md:scale-100 lg:-translate-y-[23%]"
                   alt="AI"
                 />
 

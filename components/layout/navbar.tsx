@@ -12,7 +12,7 @@ import MenuSvg from "../svg/menu-svg";
 import { HamburgerMenu } from "../design/navbar";
 
 type Props = {};
-type TSection = "hero" | "features" | "collaboration";
+type TSection = "hero" | "features" | "collaboration" | "how-to-use" | "pricing";
 
 const Navbar = (props: Props) => {
   const params = useParams();

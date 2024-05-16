@@ -13,7 +13,7 @@ import { Gradient } from "@/components/design/hero";
 type Props = {};
 
 const Services = (props: Props) => {
-  const [selectedItem, setSetselectedItem] = useState<number>(2);
+  const [selectedItem, setSelectedItem] = useState<number>(2);
 
   return (
     <Section id="how-to-use">
@@ -86,7 +86,7 @@ const Services = (props: Props) => {
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
                       key={index}
-                      onClick={() => setSetselectedItem(index)}
+                      onClick={() => setSelectedItem(index)}
                       className={cn(
                         "flex items-center justify-center rounded-2xl cursor-pointer",
                         index === selectedItem
@@ -120,9 +120,8 @@ const Services = (props: Props) => {
                 <VideoBar />
               </div>
             </div>
+            <Gradient />
           </div>
-
-          <Gradient />
         </div>
       </div>
     </Section>
