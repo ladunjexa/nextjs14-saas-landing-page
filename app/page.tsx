@@ -20,6 +20,7 @@ export default function Home() {
         <Services />
         <Pricing />
         <Roadmap />
+        <Footer />
       </div>
       <ButtonGradient />
     </main>

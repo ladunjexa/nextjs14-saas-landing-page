@@ -4,7 +4,7 @@ import SectionSvg from "../svg/section-svg";
 
 type Props = {
   className?: string;
-  id: string;
+  id?: string;
   crosses?: boolean;
   crossesOffset?: string;
   customPaddings?: boolean;
@@ -14,7 +14,7 @@ type Props = {
 const Section = ({ className, id, crosses, crossesOffset, customPaddings, children }: Props) => {
   return (
     <div
-      id={id}
+      {...(id && { id })}
       className={cn(
         "relative",
         customPaddings || "py-10 lg:py-16 xl:py-20",
