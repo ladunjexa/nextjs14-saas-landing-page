@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import PlusSvg from "@/components/svg/plus-svg";
@@ -37,7 +37,11 @@ const Rings = () => {
   );
 };
 
-export const BackgroundCircles = ({ parallaxRef }) => {
+export const BackgroundCircles = ({
+  parallaxRef,
+}: {
+  parallaxRef: React.MutableRefObject<HTMLDivElement | null>;
+}) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

@@ -12,7 +12,7 @@ type Props = {
   white?: boolean;
 };
 
-const Button = ({ className, href, children, onClick, px = "px-7", white = false }: Props) => {
+const Button = ({ className, href = "", children, onClick, px = "px-7", white = false }: Props) => {
   const buttonClasses = cn(
     `button relative inline-flex items-center justify-center h-11`,
     `transition-colors hover:text-color-1`,
@@ -37,7 +37,7 @@ const Button = ({ className, href, children, onClick, px = "px-7", white = false
     </Link>
   );
 
-  return href ? renderLink() : renderButton();
+  return href !== "" ? renderLink() : renderButton();
 };
 
 export default Button;
